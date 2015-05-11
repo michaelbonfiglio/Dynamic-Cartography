@@ -1,0 +1,564 @@
+/* Stylesheet: Base Stylesheet */
+
+
+/* #Elements
+
+Basic styling of html tags.
+
+*/
+
+body{
+  @include forza-light;
+  position: relative;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h1 {
+  @include forza-light;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.h2 {
+  @include forza-bold;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.h3 {
+  @include forza-bold;
+  font-size: 24px;
+}
+
+.h4 {
+  @include forza-bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.h5 {
+  @include forza-thin;
+  font-size: 16px;
+  letter-spacing: .5px;
+}
+
+.h6 {
+  @include forza-light;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+
+}
+
+.h6bold {
+  @include forza-bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+
+}
+
+.active .h6{
+  @include forza-bold;
+}
+
+p{
+  @include forza-light;
+  font-size: 18px;
+  margin-top: 10px;
+
+  strong{
+    @include forza-medium;
+  }
+
+}
+
+a{
+  color: $dyna-blue;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid rgba(11, 162, 206, 0);
+    -webkit-transition: border 1s ease;
+    -moz-transition: border 1s ease;
+    -ms-transition: border 1s ease;
+    -o-transition: border 1s ease;
+    transition: border 1s ease; 
+
+  &:hover, &:focus{
+    color: $dyna-blue;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(11, 162, 206, 1);
+  }
+}
+
+/* HELPER CLASSES */
+
+.max-width{
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.margBot{
+  margin-bottom: 20px;
+}
+
+.pSmall {
+  font-size: 14px;
+}
+
+.pXSmall {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.caption{
+  font-size: 9px;
+  margin-top: 5px;
+  color: #a8a8a8;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+
+}
+
+
+
+/* HEADER */
+
+.gdmfa{
+  background-color: #303030;
+  margin-bottom: 0;
+  padding: 15px;
+
+  a{
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #FFF;
+    padding-bottom: 3px;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    -webkit-transition: border 1s ease;
+    -moz-transition: border 1s ease;
+    -ms-transition: border 1s ease;
+    -o-transition: border 1s ease;
+    transition: border 1s ease; 
+
+    &:hover{
+      border-bottom: 1px solid rgba(255, 255, 255, 1);
+    }
+
+  }
+}
+
+header {
+
+  background-color: $black;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin-bottom: 40px;
+
+  &.head-index{
+    background-color: transparent;
+    padding-bottom: 40px;
+  }
+
+  a{
+    text-decoration: none;
+    border-bottom: none;
+
+    &:hover, &:focus{
+      border-bottom: none;
+    }
+  }
+
+  .h1 {
+    margin-top: 10px;
+    padding-bottom: 8px;
+    margin-left: -3px;
+
+    a{
+      color: $white;
+    }
+  }
+
+  .h5{
+    color: $white;
+
+  }
+}
+
+
+/* NAVIGATION */
+
+.nav-cont{
+  min-height: 35px;
+}
+
+.nav-pills > li > a{
+  @include forza-bold;
+  color: $white;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 40px;
+  -webkit-transition: color 1.3s ease;
+     -moz-transition: color 1.3s ease;
+      -ms-transition: color 1.3s ease;
+       -o-transition: color 1.3s ease;
+          transition: color 1.3s ease;
+
+  &:hover, &:focus{
+    background-color: transparent;
+    color: $dyna-blue;
+  }
+
+  &:first-of-type{
+  padding-left: 0;
+  }
+}
+
+
+
+.nav-toggle {
+  position: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-decoration: none;
+  text-indent: -999px;
+  position: relative;
+  overflow: hidden;
+  width: 70px;
+  height: 45px;
+  float: right;
+  z-index: 100;
+}
+
+.nav-toggle:before {
+  color: $white; /* Edit this to change the icon color */
+  font-family: "responsivenav", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  font-size: 28px;
+  text-transform: none;
+  position: absolute;
+  content: "≡";
+  text-indent: 0;
+  text-align: center;
+  speak: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav-toggle.active::before {
+  font-size: 24px;
+  content:"x";
+}
+
+/* HOME */
+
+.home{
+  color: #FFF;
+}
+
+.homePointer{
+  cursor: pointer;
+}
+
+
+
+#bgvid, #vidmute { display: none; }
+
+body.index-body{
+    background: url(../images/dynamic-home.gif) #000 no-repeat center center fixed;
+    background-size: auto 100%;
+}
+
+
+
+
+/* Animations */
+
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%;
+
+  &+ h4{
+    margin-top: 20px;
+  }
+} 
+
+.embed-container iframe, 
+.embed-container object, 
+.embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+}
+
+#animBox img + h4{
+  margin-top: 20px;
+}
+
+
+.affix {
+  top: 200px;
+}
+
+.affix-top {
+  position: relative;
+}
+
+
+
+#myAffix { 
+
+  .h6 {
+    padding-left: 0;
+  }
+
+  p {
+    display: none;
+  }
+
+  .active p {
+    display: block;
+  }
+
+  a{
+    border: none;
+    -webkit-transition: color 800ms ease;
+       -moz-transition: color 800ms ease;
+        -ms-transition: color 800ms ease;
+         -o-transition: color 800ms ease;
+            transition: color 800ms ease;
+
+    &:hover, &:focus{
+      background-color: transparent;
+
+    }
+    &:focus{
+      color: $black;
+      
+    }
+
+  }
+}
+ 
+
+
+
+/* INTERACTIVES */
+
+.mapTop{
+  padding-top: 15px;
+  background-color: $black;
+  color: $white;
+  p{
+    font-size: 16px;
+    @include forza-thin;
+    margin-bottom: 0;
+  }
+
+}
+
+#map {
+  height: 300px;
+  background-color: #5e7c87;
+  border: solid 15px $black;
+
+  svg{
+    z-index: 1000;
+    position: absolute;
+  }
+}
+
+#slrControl {
+  margin-top: 40px;
+  height: 100px;
+}
+
+.slrButton{
+  background-color: #000;
+  color: #FFF;
+  padding: 10px;
+  width: 100%;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  @include forza-medium;
+    -webkit-transition: background-color 800ms ease;
+       -moz-transition: background-color 800ms ease;
+        -ms-transition: background-color 800ms ease;
+         -o-transition: background-color 800ms ease;
+            transition: background-color 800ms ease;
+    &:hover{
+      color: white;
+      background-color: $dyna-blue;
+    }
+
+
+
+}
+
+.slrRecolor{
+  -webkit-filter: sepia(100%) grayscale(0.2) hue-rotate(156deg) brightness(4.0);
+  // -moz-filter: grayscale(1);
+  // -o-filter: grayscale(1);
+  // -ms-filter: grayscale(1);
+  //filter: blur(2px) grayscale(.5);
+}
+
+.slrTransition{
+  -webkit-filter: sepia(100%) grayscale(0.2) hue-rotate(156deg) brightness(4.0);
+  opacity:.1 !important;
+}
+
+/* EXHIBIT */
+
+.exhibit-right {
+  background: url('../images/exhibition-right2.jpg') no-repeat left top;
+  background-size: 100%;
+
+  img{
+    opacity: 1;
+    -webkit-transition: opacity 1s ease-in-out;
+       -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+         -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+  }
+
+  img:hover{
+    opacity: 0;
+  }
+}
+
+/* PROCESS */
+
+#process{
+
+  .col-sm-8 p{
+    margin-bottom: 0;
+  }
+
+  .h4{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    @include forza-black;
+  }
+
+  .h4 ~ p{
+    margin-top: 5px;
+
+  }
+}
+
+.sidebarList{
+  list-style-type: none;
+  padding-left: 0;
+
+  .h6{
+    margin-top: 20px;
+    font-size: 10px;
+    @include forza-medium;
+  }
+}
+
+.readingList{
+  background: url('../images/reading-books.png') no-repeat left top;
+  background-size: 100%;
+}
+
+.faded{
+  opacity: .3;
+
+  -moz-transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+
+  &:hover{
+    opacity: 1;
+
+  }
+}
+
+.margBotxs{
+  margin-bottom: 10px;
+}
+
+/* CREDITS */
+
+.credit-list {
+
+  padding-left: 0;
+
+  .h4{
+    @include forza-bold;
+    margin-bottom: 5px;
+
+  }
+
+  li{
+    font-size: 14px;
+    list-style-type: none;
+
+  }
+}
+
+.ch4{
+    @include forza-bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+.credit-p {
+  font-size: 14px;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  strong{
+    @include forza-medium;
+
+  }
+}
+
+
+/* FOOTER */
+footer {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+
+  p{
+    font-size: 14px;
+  }
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}

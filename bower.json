@@ -1,0 +1,14 @@
+{
+  "name": "thesis-site-2",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.1",
+    "modernizr": "~2.8.1",
+    "leaflet": "~0.7.3",
+    "d3": "~3.5.5",
+    "esri-leaflet": "~1.0.0-rc.6",
+    "responsive-nav": "~1.0.39",
+    "jquery.scrollTo": "~2.1.0",
+    "font-awesome": "~4.3.0"
+  }
+}

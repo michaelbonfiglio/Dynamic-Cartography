@@ -1,0 +1,53 @@
+/* #Typography
+
+Basic styling of typography.
+
+*/
+
+@mixin forza-thin {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 100; 
+	font-style: normal;
+}
+
+@mixin forza-light {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 300; 
+	font-style: normal;
+}
+
+@mixin forza-reg {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 400; 
+	font-style: normal;
+}
+
+@mixin forza-medium {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 500; 
+	font-style: normal;
+}
+
+@mixin forza-bold {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 700; 
+	font-style: normal;
+}
+
+@mixin forza-black {
+	font-family: 'Forza A', 'Forza B'; 
+	font-weight: 800; 
+	font-style: normal;
+}
+
+@font-face {
+  font-family: "responsivenav";
+  src:url("../fonts/responsivenav.eot");
+  src:url("../fonts/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/responsivenav.ttf") format("truetype"),
+    url("../fonts/responsivenav.woff") format("woff"),
+    url("../fonts/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+

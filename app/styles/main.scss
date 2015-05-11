@@ -1,0 +1,25 @@
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+header {background-color: #000;} 
+
+@import "partials/typography.scss";
+@import "partials/variables";
+@import "partials/mixins";
+
+
+/* Extra small devices (phones, less than 768px). Styles in _base.scss */
+@import "breakpoints/base";
+
+/* Small devices (tablets, 768px and up) Styles in _768up.scss */
+@import "breakpoints/768up";
+
+/* Medium devices (desktops, 992px and up) Styles in _992up.scss */
+//@import "breakpoints/992up";
+
+/* Large devices (large desktops, 1200px and up) Styles in _1200up.scss */
+//@import "breakpoints/1200up";
+

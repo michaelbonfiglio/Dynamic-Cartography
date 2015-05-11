@@ -1,0 +1,160 @@
+/******************************************************************
+
+Stylesheet: 768px and Up Stylesheet
+
+******************************************************************/
+
+@media (min-width: 768px) { 
+
+
+/* ELEMENTS */
+
+.h1 {
+    font-size: 68px;
+    @include forza-thin;
+}
+
+.h2 {
+  font-size: 24px;
+}
+
+.h3 {
+  font-size: 28px;
+}
+
+.h4 {
+  font-size: 14px;
+}
+
+.h5 {
+  font-size: 16px;
+}
+
+p{
+  font-size: 18px;
+
+}
+
+/* HELPER CLASSES */
+
+.margTop{
+  margin-top: 120px;
+}
+
+.margBot{
+  margin-bottom: 30px;
+}
+
+.margBotXtra{
+  margin-bottom: 80px;
+}
+
+.pPadding{
+  padding-right: 60px;
+}
+
+
+/* HEADER */
+
+header{
+  padding-top: 60px;
+  padding-bottom: 125px;
+  margin-bottom: 60px;
+
+  .h1{
+    margin-left: -7px;
+  }
+
+  .nav-pills {
+    li{
+      width: auto;
+    }
+  }
+}
+
+.gdmfa{
+  margin-bottom: 0;
+}
+
+
+
+
+/* NAVIGATION */
+
+.nav-pills > li > a{
+  @include forza-bold;
+  color: $white;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  padding: 10px 40px;
+  transition: color 1.3s ease;
+
+  &:hover, &:focus{
+    background-color: transparent;
+    color: $dyna-blue;
+  }
+
+  &:first-of-type{
+  padding-left: 0;
+  }
+}
+
+/* HOME */
+
+#bgvid {
+  display: inline-block;
+  position: fixed; right: 0; top: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+  //background: url(polina.jpg) no-repeat;
+  background-size: cover;
+}
+
+#vidmute {
+  display: block;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  line-height: 64px;
+  width: 70px;
+  font-size: 18px;
+  text-align: center;
+  position: absolute;
+  right: 15px;
+  top: 30px;
+  cursor: pointer;
+   -moz-backface-visibility: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+
+  &:hover{
+    background-color: #ffffff;
+    color: $black;
+    -webkit-transform: scale(1.12);
+    -moz-transform: scale(1.12);
+    -o-transform: scale(1.12);
+    -ms-transform: scale(1.12);
+    transform: scale(1.12);
+  }
+}
+
+body.index-body{
+    background: none;
+}
+
+#homeText{
+  margin-bottom: 120px;
+  
+}
+
+
+
+/* INTERACTIVES */
+
+#map {
+  height: 600px;
+}
+
+}
